@@ -17,14 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <ClerkProvider>
-        <div className="flex flex-col">
-        <Header/>
-          <main className="flex-1">
-            {children}
-          </main>
-        <Footer/>
-        </div>
-  </ClerkProvider>
+    <ClerkProvider>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </ClerkProvider>
   );
 }
