@@ -29,7 +29,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         )}
         <ProductSideMenu product={product} />
         {product?.status === "sale" ? (
-          <p className="absolute top-2 left-2 z-10 text-xs border border-darkColor/50 px-2 rounded-full group-hover:border-lightGreen hover:text-shop_dark_green hoverEffect">
+          <p className="absolute top-2 left-2 z-10 text-xs border border-darkColor/50 px-2 rounded-full group-hover:border-shop_light_green group-hover:text-shop_dark_green hoverEffect">
             Sale!
           </p>
         ) : (
@@ -56,15 +56,16 @@ const ProductCard = ({ product }: { product: Product }) => {
           <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
               <StarIcon
+                fontSize={12}
                 key={index}
                 className={
-                  index < 4 ? "text-shop_light_green" : " text-lightText"
+                  index < 4 ? "text-shop_light_green" : " text-lightColor"
                 }
                 fill={index < 4 ? "#93D991" : "#ababab"}
               />
             ))}
           </div>
-          <p className="text-lightText text-xs tracking-wide">5 Reviews</p>
+          <p className="text-lightColor text-xs tracking-wide">5 Reviews</p>
         </div>
 
         <div className="flex items-center gap-2.5">
